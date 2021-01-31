@@ -1,0 +1,226 @@
+@import "animations";
+@import "mixins";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 478px;
+    width: 327px;
+    margin: auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px $LightGrayishBlue;
+    color: $GrayishBlue;
+    font-size: 0.9375rem;
+
+
+    @include breakpoint-up(medium){
+        height: 400px;
+        width: 540px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+                        ' view price'
+                        ' slide slide'
+                        ' billing billing'
+                        ' separator separator'
+                        ' feature cta';
+    }
+
+    .views {
+        margin: 2.5rem 0 1.875rem 0;
+
+        @include breakpoint-up(medium){
+            grid-area: view;
+            margin: 2.5rem auto 1.875rem auto;
+        }
+    }
+
+    .slidecontainer {
+
+        @include breakpoint-up(medium){
+            grid-area: slide;
+            margin: auto;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            height: 0.5rem;
+            width: 280px;
+            background: linear-gradient(90deg, hsl(174, 77%, 80%) 0%, $LightGrayishBlue 0%);
+            border-radius: 4px;
+            outline: none;
+            position: relative;
+            
+            @include breakpoint-up(medium){
+                width: 420px;
+            }
+             
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                background: $StrongCyan url('https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/icon-slider.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                box-shadow: 0px 10px 20px 5px $SoftCyan;
+
+                &:hover{
+                    opacity: 0.7;
+                }
+
+                &:active{
+                    background-color: hsl(174, 86%, 35%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.625rem;
+
+        @include breakpoint-up(medium){
+            grid-area: price;
+            margin: 2.15rem auto auto auto;
+        }
+
+        #cost {
+            color: $DarkDesaturatedBlue;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .cost-align {
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+    .billing {
+        margin: 2.75rem 0 2.375rem 0;
+        display: flex;
+        flex-direction: row;
+
+        @include breakpoint-up(medium){
+            grid-area: billing;
+            margin: 2rem auto 2.375rem auto;
+        }
+
+        .discount {
+            text-align: center;
+            display: inline-block;
+            width: 32px;
+            height: 14px;
+            font-size: 0.625rem;
+            background-color: #feece7;
+            color: #ff8c66;
+            border-radius: 18px;
+        }
+
+        .toggle-btn {
+            display: inline-block;
+            height: 22px;
+            width: 44px;
+            margin: 0 0.75rem 0 0.75rem;
+            padding: 2px;
+            background-color: $LightGrayishBlue1;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+        }
+
+        .inner-circle {
+            width: 18px;
+            height: 18px;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+
+        .active {
+            background-color: $StrongCyan;
+            transition: all 150ms ease-in-out;
+
+            .inner-circle {
+                animation-name: moveleft;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        .not-active {
+            transition: all 150ms ease-in-out;
+
+            .inner-circle {
+                animation-name: moveback;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            }
+        }
+        
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background: hsl(180, 3%, 94%);
+        margin-bottom: 28px;
+
+        @include breakpoint-up(medium){
+            grid-area: separator;
+        }
+    }
+
+    .feature-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint-up(medium){
+            display: grid;
+            grid-area: feature;
+            align-items: flex-start;
+        }
+
+        .features {
+            position: relative;
+
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+
+            &:last-child {
+                margin-bottom: 36px;
+
+                @include breakpoint-up(medium){
+                    margin-bottom: 20px;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 14px;
+                left: -20px;
+                background-image: url('https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/icon-check.svg');
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+        }
+    }
+
+    .button {
+
+        @include breakpoint-up(medium){
+            grid-area: cta;
+            margin: auto;
+        }
+    }
+}

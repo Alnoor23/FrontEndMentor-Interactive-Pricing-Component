@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="app/style.css" >
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="text-header">
+    <h2>Simple, traffic-based pricing</h2>
+    <p>Sign-up for our 30-day trial.</p>
+    <p> No credit card required.</p>
+  </div>
+
+  <div class="card">
+    <div class="views"><span id="views">10K </span>PAGEVIEWS</div>
+    <div class="slidecontainer">
+      <input type="range" min="2" max="10" value="0" step="2" id="myRange" class="slider">
+    </div>
+
+    <div class="flex"><span id="cost">$8</span> <span id="moy" class="cost-align">&nbsp;/ month</span></div>
+
+    <div class="billing">
+      <span>Monthly Billing</span>
+      <a id="tgl-btn" class="toggle-btn butt"><div class="inner-circle"></div></a>
+      <span>Yearly Billing <span class="discount">-25%</span></span>
+    </div>
+
+    <span class="line">&nbsp;</span>
+
+    <div class="feature-container">
+      <p class="features">Unlimited websites</p>
+      <p class="features">100% data ownership</p>
+      <p class="features">Email reports</p>
+    </div>
+    <div class="button">Start my trial</div>
+  </div>
+
+  <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/alnoor23">Alnoor</a>.
+  </div>
+-->
+<script type="text/javascript" src="app/script.js"></script>
+</body>
+</html>

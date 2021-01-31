@@ -1,0 +1,18 @@
+.text-header {
+    padding-top:95px;
+    padding-bottom: 70px; 
+    text-align: center;
+    color: $DarkDesaturatedBlue;
+    background-image: url('https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 145px 150px;
+
+    h2{
+        margin-bottom: 10px;
+    }
+    p {
+        margin: 14px 0 14px 0;
+        color: $GrayishBlue;
+    }
+}

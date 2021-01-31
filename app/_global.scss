@@ -1,0 +1,82 @@
+@import "mixins";
+@import "variables";
+
+html {
+    font-size: 0.9375rem;
+    box-sizing: border-box;
+}
+
+*, ::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    font-family: 'Manrope', sans-serif;
+    background-image: url('https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/bg-pattern.svg');
+    background-repeat: no-repeat;  
+    background-size: 100% 50%;   
+}
+
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &--pall {
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+    &--py {
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+    }
+    &--px {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    &--pt {
+        padding-top: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+        }
+    }
+    &--pr {
+        padding-right: 1.5rem;
+    }
+    &--pb {
+        padding-bottom: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-bottom: 6rem;
+        }
+    }
+    &--pl {
+        padding-left: 1.5rem;
+    }
+}
+
+button, .button {
+    height: 41px;
+    width: 170px;
+    position: relative;
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: $DarkDesaturatedBlue;
+    border: none;
+    color: $PaleBlue;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 300ms ease-in-out;
+
+}

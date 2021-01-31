@@ -83,3 +83,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 **Have fun building!** 🚀
 "# FrontEndMentor-Interactive-Pricing-Component" 
+"# FrontEndMentor-Interactive-Pricing-Component" 

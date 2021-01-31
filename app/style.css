@@ -1,0 +1,446 @@
+html {
+  font-size: 0.9375rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, ::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  font-family: 'Manrope', sans-serif;
+  background-image: url("https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.container--pall {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.container--py {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container--pt {
+  padding-top: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
+}
+
+.container--pr {
+  padding-right: 1.5rem;
+}
+
+.container--pb {
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
+}
+
+.container--pl {
+  padding-left: 1.5rem;
+}
+
+button, .button {
+  height: 41px;
+  width: 170px;
+  position: relative;
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #293356;
+  border: none;
+  color: #bdccff;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.text-header {
+  padding-top: 95px;
+  padding-bottom: 70px;
+  text-align: center;
+  color: #293356;
+  background-image: url("https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 145px 150px;
+}
+
+.text-header h2 {
+  margin-bottom: 10px;
+}
+
+.text-header p {
+  margin: 14px 0 14px 0;
+  color: #858fad;
+}
+
+@-webkit-keyframes moveleft {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 22px;
+  }
+}
+
+@keyframes moveleft {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 22px;
+  }
+}
+
+@-webkit-keyframes moveback {
+  from {
+    margin-left: 22px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+@keyframes moveback {
+  from {
+    margin-left: 22px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 478px;
+  width: 327px;
+  margin: auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 15px #eaeefb;
+          box-shadow: 0px 10px 15px #eaeefb;
+  color: #858fad;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 40em) {
+  .card {
+    height: 400px;
+    width: 540px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (auto)[6];
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: ' view price' ' slide slide' ' billing billing' ' separator separator' ' feature cta';
+  }
+}
+
+.card .views {
+  margin: 2.5rem 0 1.875rem 0;
+}
+
+@media (min-width: 40em) {
+  .card .views {
+    grid-area: view;
+    margin: 2.5rem auto 1.875rem auto;
+  }
+}
+
+@media (min-width: 40em) {
+  .card .slidecontainer {
+    grid-area: slide;
+    margin: auto;
+  }
+}
+
+.card .slidecontainer .slider {
+  -webkit-appearance: none;
+  height: 0.5rem;
+  width: 280px;
+  background: -webkit-gradient(linear, left top, right top, from(#a5f3eb), color-stop(0%, #eaeefb));
+  background: linear-gradient(90deg, #a5f3eb 0%, #eaeefb 0%);
+  border-radius: 4px;
+  outline: none;
+  position: relative;
+}
+
+@media (min-width: 40em) {
+  .card .slidecontainer .slider {
+    width: 420px;
+  }
+}
+
+.card .slidecontainer .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: #10d5c2 url("https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-box-shadow: 0px 10px 20px 5px #a5f3eb;
+          box-shadow: 0px 10px 20px 5px #a5f3eb;
+}
+
+.card .slidecontainer .slider::-webkit-slider-thumb:hover {
+  opacity: 0.7;
+}
+
+.card .slidecontainer .slider::-webkit-slider-thumb:active {
+  background-color: #0ca697;
+  opacity: 1;
+}
+
+.card .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 0.625rem;
+}
+
+@media (min-width: 40em) {
+  .card .flex {
+    grid-area: price;
+    margin: 2.15rem auto auto auto;
+  }
+}
+
+.card .flex #cost {
+  color: #293356;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.card .flex .cost-align {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card .billing {
+  margin: 2.75rem 0 2.375rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 40em) {
+  .card .billing {
+    grid-area: billing;
+    margin: 2rem auto 2.375rem auto;
+  }
+}
+
+.card .billing .discount {
+  text-align: center;
+  display: inline-block;
+  width: 32px;
+  height: 14px;
+  font-size: 0.625rem;
+  background-color: #feece7;
+  color: #ff8c66;
+  border-radius: 18px;
+}
+
+.card .billing .toggle-btn {
+  display: inline-block;
+  height: 22px;
+  width: 44px;
+  margin: 0 0.75rem 0 0.75rem;
+  padding: 2px;
+  background-color: #cdd7ee;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.card .billing .inner-circle {
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.card .billing .active {
+  background-color: #10d5c2;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.card .billing .active .inner-circle {
+  -webkit-animation-name: moveleft;
+          animation-name: moveleft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.card .billing .not-active {
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.card .billing .not-active .inner-circle {
+  -webkit-animation-name: moveback;
+          animation-name: moveback;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.card .line {
+  width: 100%;
+  height: 1px;
+  background: #eff0f0;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 40em) {
+  .card .line {
+    grid-area: separator;
+  }
+}
+
+.card .feature-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 40em) {
+  .card .feature-container {
+    display: -ms-grid;
+    display: grid;
+    grid-area: feature;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.card .feature-container .features {
+  position: relative;
+}
+
+.card .feature-container .features:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.card .feature-container .features:last-child {
+  margin-bottom: 36px;
+}
+
+@media (min-width: 40em) {
+  .card .feature-container .features:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.card .feature-container .features::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 14px;
+  left: -20px;
+  background-image: url("https://alnoor23.github.io/FrontEndMentor-Interactive-Pricing-Component/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+@media (min-width: 40em) {
+  .card .button {
+    grid-area: cta;
+    margin: auto;
+  }
+}
+
+@keyframes moveleft {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 22px;
+  }
+}
+
+@keyframes moveback {
+  from {
+    margin-left: 22px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
